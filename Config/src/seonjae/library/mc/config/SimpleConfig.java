@@ -17,6 +17,7 @@ public class SimpleConfig extends Config {
     @Override
     @SneakyThrows(Exception.class)
     public SimpleConfig load() {
+        super.load();
         for (Field field : this.getClass().getDeclaredFields()) {
             field.setAccessible(true);
 
